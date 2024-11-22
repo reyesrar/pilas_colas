@@ -3,11 +3,12 @@
 using namespace std;
 
 template <class T>
-Node<T>::Node(T data, Node<T>* next){
+Node<T>::Node(T data, Node<T>* next, int priority){
     this->data=data;
     if(next!=NULL){
         this->next=next;
     }
+    this->priority=priority;
 }
 template <class T>
 Node<T>* Node<T>::getNextNode(){
@@ -43,5 +44,12 @@ Node<T>::~Node(){
     next=NULL;
 }
 
+template <class T>
+void Node<T>::setPriority(int priority){
+    this->priority=priority;
+}
 
-
+template <class T>
+int Node<T>::getPriority(){
+   return this->priority;
+}

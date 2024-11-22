@@ -7,7 +7,7 @@ class Queue{
         int length=0;
     public:
         int getLength();
-        void push(T);
+        void push(T,int);
         T pop();
         bool isEmpty();
         void print();
